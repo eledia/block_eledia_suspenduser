@@ -39,4 +39,3 @@ $string['save_changes'] = 'Änderungen speichern';
 $string['saved'] = 'Änderungen gespeichert';
 
 $string['title'] = 'Nutzersperrung';
-

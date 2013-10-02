@@ -45,5 +45,4 @@ if ($ADMIN->fulltree) {
             get_string('eledia_suspenduserfile', 'block_eledia_suspenduser'),
             'suspend_users.csv',
             PARAM_FILE));
-
 }

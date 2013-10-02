@@ -49,4 +49,3 @@ $PAGE->set_heading($header);
 echo $OUTPUT->header();
 $mform->display();
 echo $OUTPUT->footer();
-

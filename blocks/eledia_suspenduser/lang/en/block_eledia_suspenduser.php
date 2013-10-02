@@ -24,18 +24,18 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['back'] = 'back';
+$string['back'] = 'Back';
 
 $string['eledia_suspenduser:addinstance'] = 'add suspend user block';
-$string['eledia_suspenduserfile'] = 'filename';
-$string['eledia_suspenduserpath'] = 'filepath in moodledata';
+$string['eledia_suspenduserfile'] = 'Filename';
+$string['eledia_suspenduserpath'] = 'Filepath in moodledata';
 $string['el_config_header'] = 'Configuration to suspend user accounts';
 $string['el_header'] = 'Configuration Suspend User';
 $string['el_navname'] = 'Suspend User';
 
 $string['pluginname'] = 'Suspend User';
 
-$string['save_changes'] = 'save changes';
+$string['save_changes'] = 'Save changes';
 $string['saved'] = 'Changes saved';
 
 $string['title'] = 'Suspend User';
