@@ -24,9 +24,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version = '2012051600';// The current plugin version (Date: YYYYMMDDXX).
+$plugin->version = 2012051600;// The current plugin version (Date: YYYYMMDDXX).
 $plugin->release = '0.1 (2012051600)';
 $plugin->cron = 86400;
-$plugin->dependencies = array('local_eledialib' => 2012012300);
 $plugin->maturity = MATURITY_STABLE;
-$plugin->requires  = 2013051402;
+$plugin->requires  = 2013050100;

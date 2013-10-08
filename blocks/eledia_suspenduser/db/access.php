@@ -32,7 +32,12 @@ $capabilities = array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_BLOCK,
         'archetypes' => array(),
-
+        'clonepermissionsfrom' => 'moodle/site:manageblocks'
+    ),
+    'block/eledia_suspenduser:config' => array(
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(),
         'clonepermissionsfrom' => 'moodle/site:manageblocks'
     ),
 );

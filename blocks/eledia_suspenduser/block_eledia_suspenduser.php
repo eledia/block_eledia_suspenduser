@@ -46,8 +46,7 @@ class block_eledia_suspenduser extends block_base {
         $this->content->text = '';
         $this->content->footer = '';
 
-        if (has_capability('moodle/site:config', get_context_instance(CONTEXT_SYSTEM))) {
-
+        if (has_capability('block/eledia_suspenduser:config', CONTEXT_BLOCK::instance($this->instance->id))) {
             $this->content->text .= '<ul>';
             $this->content->text .= '<li>';
             $this->content->text .= '<a href="'.$CFG->wwwroot.'/blocks/eledia_suspenduser/config_suspenduser.php" >';
@@ -68,9 +67,6 @@ class block_eledia_suspenduser extends block_base {
         global $CFG;
         error_reporting(E_ALL);
 
-        require_once("$CFG->dirroot/local/eledialib/lib.php");
-        $eledia = new eledia_lib();
-
         // Get filepath & name.
         if (!isset($CFG->eledia_suspenduserpath)) {
             set_config('eledia_suspenduserpath', '/temp/');
@@ -83,7 +79,7 @@ class block_eledia_suspenduser extends block_base {
         $name = $CFG->eledia_suspenduserfile;
 
         // Read file.
-        $user_mails = $eledia->get_csv_content_as_array($CFG->dataroot.$path.$name, ';');
+        $user_mails = $this->get_csv_content_as_array($CFG->dataroot.$path.$name, ';');
 
         // Get user and suspend user.
         if ($user_mails) {
@@ -103,5 +99,38 @@ class block_eledia_suspenduser extends block_base {
             // Suspend user.
             $DB->set_field('user', 'suspended', '1', array('id' => $u->id));
         }
+    }
+
+    /**
+     * Returns the content of an csv file as an array
+     *
+     * @param string $datafile the path with filename to read from
+     * @param string $delimiter the delimiter of the csv file
+     * @param boolean $firstlinetitle titles in firstline true/false
+     * @return array or false if file not found
+     */
+    public function get_csv_content_as_array($datafile, $delimiter, $firstlinetitle = false) {
+
+        if (!file_exists($datafile)) {
+            return false;
+        }
+        $handle = fopen($datafile, 'r');
+
+        $dataarray = array();
+        if (!$firstlinetitle) {
+            while (false !== ($data = fgetcsv($handle, '', $delimiter))) {
+                $dataarray[] = $data;
+            }
+        } else {
+            $titles = fgetcsv($handle, '', $delimiter);
+            while (false !== ($data = fgetcsv($handle, '', $delimiter))) {
+                $d = array();
+                foreach ($data as $key => $value) {
+                    $d[$titles[$key]] = $value;
+                }
+                $dataarray[] = $d;
+            }
+        }
+        return $dataarray;
     }
 }
