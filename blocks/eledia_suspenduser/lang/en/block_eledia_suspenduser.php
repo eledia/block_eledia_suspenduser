@@ -27,6 +27,7 @@
 $string['back'] = 'Back';
 
 $string['eledia_suspenduser:addinstance'] = 'add suspend user block';
+$string['eledia_suspenduser:config'] = 'configurate the suspend user plugin';
 $string['eledia_suspenduserfile'] = 'Filename';
 $string['eledia_suspenduserpath'] = 'Filepath in moodledata';
 $string['el_config_header'] = 'Configuration to suspend user accounts';

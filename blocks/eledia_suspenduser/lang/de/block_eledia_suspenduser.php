@@ -27,6 +27,7 @@
 $string['back'] = 'zurück';
 
 $string['eledia_suspenduser:addinstance'] = 'Block Nutzer sperren hinzufügen';
+$string['eledia_suspenduser:config'] = 'configurate the suspend user plugin';
 $string['eledia_suspenduserfile'] = 'Dateiname';
 $string['eledia_suspenduserpath'] = 'Dateipfad im Moodledata';
 $string['el_config_header'] = 'Konfiguration für das sperren von Nutzer/innen';

@@ -65,7 +65,6 @@ class block_eledia_suspenduser extends block_base {
     public function cron() {
 
         global $CFG;
-        error_reporting(E_ALL);
 
         // Get filepath & name.
         if (!isset($CFG->eledia_suspenduserpath)) {
