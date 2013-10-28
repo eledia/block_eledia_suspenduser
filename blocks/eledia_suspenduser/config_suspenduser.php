@@ -30,10 +30,9 @@ require_once('config_suspenduser_form.php');
 // Check for valid admin user - no guest autologin.
 require_login(0, false);
 $PAGE->set_url('/blocks/eledia_suspenduser/config_suspenduser.php');
-$PAGE->set_context(get_context_instance(CONTEXT_SYSTEM));
+$context = CONTEXT_SYSTEM::instance();
+$PAGE->set_context($context);
 $PAGE->set_pagelayout('standard');
-
-$context = get_context_instance(CONTEXT_SYSTEM);
 
 require_capability('moodle/site:config', $context);
 
