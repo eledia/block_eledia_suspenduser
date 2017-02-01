@@ -26,6 +26,7 @@
 
 $plugin->version = 2013101500;// The current plugin version (Date: YYYYMMDDXX).
 $plugin->release = '0.1 (2012051600)';
+$plugin->component= 'block_eledia_suspenduser';
 $plugin->cron = 86400;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->requires  = 2013101800;
