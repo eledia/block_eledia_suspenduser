@@ -36,6 +36,8 @@ $string['el_navname'] = 'Suspend User';
 
 $string['pluginname'] = 'Suspend User';
 
+$string['privacy:metadata'] = 'The eLeDia suspend user plugin does not store any personal data.';
+
 $string['save_changes'] = 'Save changes';
 $string['saved'] = 'Changes saved';
 
