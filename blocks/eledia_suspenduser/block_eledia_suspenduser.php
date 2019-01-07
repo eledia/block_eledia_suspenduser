@@ -28,7 +28,7 @@ class block_eledia_suspenduser extends block_base {
 
     public function init() {
         $this->title   = get_string('title', 'block_eledia_suspenduser');
-        $this->version = 2012051601; // Format yyyymmddvv.
+        $this->version = 2018061500; // Format yyyymmddvv.
         $this->cron    = 1;
     }
 

@@ -31,18 +31,24 @@ if ($ADMIN->fulltree) {
     if (!isset($CFG->eledia_suspenduserpath)) {
         set_config('eledia_suspenduserpath', '/temp/');
     }
-    $settings->add(new admin_setting_configtext('eledia_suspenduserpath',
+    $configs = array();
+    $configs[] = new  admin_setting_configtext('eledia_suspenduserpath',
             get_string('eledia_suspenduserpath', 'block_eledia_suspenduser'),
             get_string('eledia_suspenduserpath', 'block_eledia_suspenduser'),
             '/temp/',
-            PARAM_URL));
+            PARAM_RAW);
 
     if (!isset($CFG->eledia_suspenduserfile)) {
         set_config('eledia_suspenduserfile', 'suspend_users.csv');
     }
-    $settings->add(new admin_setting_configtext('eledia_suspenduserfile',
+    $configs[] = new admin_setting_configtext('eledia_suspenduserfile',
             get_string('eledia_suspenduserfile', 'block_eledia_suspenduser'),
             get_string('eledia_suspenduserfile', 'block_eledia_suspenduser'),
             'suspend_users.csv',
-            PARAM_FILE));
+            PARAM_FILE);
+
+    foreach ($configs as $config) {
+        $config->plugin = 'block_eledia_suspenduser';
+        $settings->add($config);
+    }
 }

@@ -45,7 +45,7 @@ class config_suspenduser_form extends moodleform {
                 get_string('eledia_suspenduserpath', 'block_eledia_suspenduser'),
                 'maxlength="30" size="30"');
         $mform->setDefault('eledia_suspenduserpath', $CFG->eledia_suspenduserpath);
-        $mform->setType('eledia_suspenduserpath', PARAM_URL);
+        $mform->setType('eledia_suspenduserpath', PARAM_RAW);
 
         if (!isset($CFG->eledia_suspenduserfile)) {
             set_config('eledia_suspenduserfile', 'suspend_users.csv');
