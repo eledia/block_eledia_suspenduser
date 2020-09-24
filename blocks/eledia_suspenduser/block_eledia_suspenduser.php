@@ -24,6 +24,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 class block_eledia_suspenduser extends block_base {
 
     public function init() {
@@ -63,7 +65,6 @@ class block_eledia_suspenduser extends block_base {
     }
 
     public function cron() {
-
         global $CFG;
 
         // Get filepath & name.
