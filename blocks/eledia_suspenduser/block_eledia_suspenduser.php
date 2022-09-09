@@ -20,7 +20,7 @@
  * @package    block
  * @subpackage eledia_suspenduser
  * @author     Benjamin Wolf <support@eledia.de>
- * @copyright  2013 eLeDia GmbH
+ * @copyright  2020 eLeDia GmbH
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -30,7 +30,7 @@ class block_eledia_suspenduser extends block_base {
 
     public function init() {
         $this->title   = get_string('title', 'block_eledia_suspenduser');
-        $this->version = 2018061500; // Format yyyymmddvv.
+        $this->version = 2020092400; // Format yyyymmddvv.
         $this->cron    = 1;
     }
 

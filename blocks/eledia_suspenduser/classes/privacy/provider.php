@@ -18,7 +18,7 @@
  *
  * @package     block
  * @subpackage  eledia_suspenduser
- * @copyright   2018 eLeDia GmbH
+ * @copyright   2020 eLeDia GmbH
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

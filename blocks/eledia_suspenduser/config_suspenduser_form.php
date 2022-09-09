@@ -20,7 +20,7 @@
  * @package    block
  * @subpackage eledia_suspenduser
  * @author     Benjamin Wolf <support@eledia.de>
- * @copyright  2013 eLeDia GmbH
+ * @copyright  2020 eLeDia GmbH
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

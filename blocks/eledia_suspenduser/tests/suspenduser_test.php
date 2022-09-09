@@ -16,7 +16,10 @@
 /**
  * Usercleanup Testcase.
  *
- * @package    block_eledia_suspenduser
+ * @package    block
+ * @subpackage eledia_suspenduser
+ * @author     Benjamin Wolf <support@eledia.de>
+ * @copyright  2020 eLeDia GmbH
  * @category   test
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
  */

@@ -24,8 +24,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version = 2018061500;// The current plugin version (Date: YYYYMMDDXX).
-$plugin->release = '0.2 (2018061500)';
+$plugin->version = 2020092400;// The current plugin version (Date: YYYYMMDDXX).
+$plugin->release = '0.3 (2020092400)';
 $plugin->component= 'block_eledia_suspenduser';
 $plugin->cron = 86400;
 $plugin->maturity = MATURITY_STABLE;
